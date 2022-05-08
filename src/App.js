@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import ChooseMode from './components/Pages/ChoseMode'
+import Authorization from './components/Pages/Authorization'
+import EmployersTesting from './components/Pages/EmployersTesting'
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [mode, setMode] = useState('');
+  const [name, setName] = useState('');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {!isLoggedIn && !mode &&
+        <ChooseMode chooseMode={setMode} />
+      }
+      {!isLoggedIn && mode &&
+        <Authorization name={name} mode={mode} setName={setName} setIsLoggedIn={setIsLoggedIn} />
+      }
+      {isLoggedIn &&
+        <div>
+          {mode === 'employer' &&
+            <EmployersTesting name={name} />
+          }
+        </div>
+      }
+
     </div>
   );
 }
