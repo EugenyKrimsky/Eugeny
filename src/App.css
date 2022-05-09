@@ -53,7 +53,7 @@ input[type="text"] {
     display: flex;
     flex-direction: column;
     color: #B9B9B9;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 40px;
 }
 
@@ -79,11 +79,29 @@ input[type="text"] {
     margin-bottom: 20px;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0;
+}
+
+.footer-wrap .borderBlock {
+    margin-top: 20px;
+}
+
 .tabs {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
+}
+
+.vacancies {
+    padding: 40px 0;
+}
+
+.candidates {
+    padding: 40px 0;
 }
 
 .tabs div:hover {
@@ -92,22 +110,26 @@ input[type="text"] {
 }
 
 .auth .borderBlock {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
 }
 
 .inputBlock {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5px;
 }
 
 .tabs ._active {
     color: #B7F6FF;
 }
-ъ
+
 .auth-wrap {
     border: 20px solid #B7F6FF;
     border-radius: 10px;
+}
+
+._center {
+    margin: 0 auto;
 }
 
 .auth {
@@ -118,7 +140,14 @@ input[type="text"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
+
+.workSection .borderBlock {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
 
 .border {
     background-color: #B7F6FF;
@@ -127,14 +156,54 @@ input[type="text"] {
 }
 
 .circle {
+    position: absolute;
     width: 10px;
     height: 10px;
     background-color: #B7F6FF;
     border-radius: 50px;
 }
 
+.right {
+    right: 0;
+}
+
+.left {
+    left: 0;
+}
+
 .flex-row {
     display: flex;
+}
+
+.vertBorder {
+    background-color: #B7F6FF;
+    align-self: stretch;
+    width: 3px;
+}
+
+.EmployersTesting {
+    display: flex;
+    margin: 0 auto;
+    gap: 38px;
+}
+
+.item {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    border: 3px solid #B7F6FF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 20px;
+}
+
+.item:hover {
+    cursor: pointer;
+    background-color: #B9B9B9;
+    box-shadow: none;
+    color: white;
 }
 
 .Button {
@@ -145,11 +214,12 @@ input[type="text"] {
     padding: 15px 30px;
     border: 1px solid #B9B9B9;
     border-radius: 10px;
-
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .Button:hover {
     cursor: pointer;
     background-color: #B9B9B9;
+    box-shadow: none;
     color: white;
 }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Button from './../UI/Button'
 import Head from './../UI/Head'
 import Input from './../UI/Input'
+import Footer from './../UI/Footer'
 
 const Authorization = props => {
 
@@ -41,7 +42,7 @@ const Authorization = props => {
                                 <div>Пароль</div>
                                 <Input name="password" />
                             </div>
-                            <Button text="ВОЙТИ" callback={() => { }} />
+                            <Button className="_center" text="ВОЙТИ" callback={() => { }} />
                         </div>
                     }
                     {formMode === 'registration' &&
@@ -55,11 +56,12 @@ const Authorization = props => {
                             <div className="inputBlock">
                                 <div>Пароль</div>
                                 <Input name="password" /></div>
-                            <Button text="РУГИСТРАЦИЯ" callback={setIsLoggedIn} />
+                            <Button className="_center" text="РЕГИСТРАЦИЯ" callback={setIsLoggedIn} />
                         </div>
                     }
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

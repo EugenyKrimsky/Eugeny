@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 const Button = props => {
 
     const callback = props.callback;
+    const className = props.className;
 
     return (
-        <div className='Button' onClick={callback}>{props.text}</div>
+        <div className={'Button ' + className} onClick={callback}>{props.text}</div>
     );
 };
 

@@ -17,9 +17,9 @@ const Head = props => {
             </div>
 
             <div className="borderBlock">
-                <div className="circle"></div>
+                <div className="circle left"></div>
                 <div className="border"></div>
-                <div className="circle"></div>
+                <div className="circle right"></div>
             </div>
         </div>
     );

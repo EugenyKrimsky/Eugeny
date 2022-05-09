@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import Head from './../UI/Head'
+import Footer from './../UI/Footer'
 
 const EmployersTesting = props => {
 
     const name = props.name;
     const vacancies = props.vacancies;
-    const candidates = vacancies.find(el => el.active).candidates;
+    const activeVacancy = vacancies.find(el => el.active);
+    let candidates = [];
+    if (activeVacancy) {
+        candidates = vacancies.find(el => el.active).candidates;
+    }
     const setVacancies = props.setVacancies;
 
     const setActiveVacancy = el => {
@@ -21,9 +26,9 @@ const EmployersTesting = props => {
     }
 
     return (
-        <div>
+        <div className='workSection mainCol'>
             <Head />
-            <div>
+            <div className='EmployersTesting'>
                 <div className="vacancies">
                     {vacancies.map(el =>
                         <div className="item" onClick={() => setActiveVacancy(el)}>
@@ -31,6 +36,7 @@ const EmployersTesting = props => {
                         </div>
                     )}
                 </div>
+                <div className="vertBorder"></div>
                 <div className="candidates">
                     {candidates.map(el =>
                         <div className="item">
@@ -39,6 +45,7 @@ const EmployersTesting = props => {
                     )}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };
