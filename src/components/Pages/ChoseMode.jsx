@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import logo from './../../assets/Logo.svg'
 import Button from './../UI/Button'
 
 const ChoseMode = props => {
@@ -7,9 +7,12 @@ const ChoseMode = props => {
     const chooseMode = props.chooseMode;
 
     return (
-        <div>
-            <Button text="Работадатель" callback={() => chooseMode('employer')} />
-            <Button text="Соискатель" callback={() => chooseMode('applicant')} />
+        <div className='mainCol chooseMods'>
+            <img src={logo}/>
+            <div className='flex-row'>
+                <Button text="Работадатель" callback={() => chooseMode('employer')} />
+                <Button text="Соискатель" callback={() => chooseMode('applicant')} />
+            </div>
         </div>
     );
 };
