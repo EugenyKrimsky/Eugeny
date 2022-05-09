@@ -1,17 +1,31 @@
+import { useState } from 'react';
 import React from 'react';
 import HeadLogo from './../../assets/HeadLogo.svg'
 
 const Head = props => {
 
-    const menu = props.menu;
+    const name = props.name;
+    let [open, setOpen] = useState(false);
+    let className = "name";
+
+    if (open) {
+        className += ' open';
+    }
 
     return (
         <div className='head-wrap'>
             <div className='head'>
                 <img src={HeadLogo}></img>
-                <div>
-                    {menu &&
-                        <div className="menu"></div>
+                <div className='menuBlock'>
+                    {name &&
+                        <div className={className} onClick={() => setOpen(!open)}>{name}</div>
+                    }
+                    {open && 
+                        <div className="menu">
+                            <div className="menu-item">Тестирование</div>
+                            <div className="menu-item">Результаты</div>
+                            <div className="menu-item">Выйти</div>
+                        </div>
                     }
                 </div>
             </div>

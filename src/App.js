@@ -14,6 +14,14 @@ function App() {
         name: 'Кандидат 1',
         questions: 10,
         answered: 9
+      },{
+        name: 'Кандидат 2',
+        questions: 10,
+        answered: 9
+      },{
+        name: 'Кандидат 3',
+        questions: 10,
+        answered: 9
       }]
     }, {
       name: 'Вакансия 2', active: true, candidates: [{

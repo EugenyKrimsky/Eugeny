@@ -27,7 +27,7 @@ const EmployersTesting = props => {
 
     return (
         <div className='workSection mainCol'>
-            <Head />
+            <Head name={name}/>
             <div className='EmployersTesting'>
                 <div className="vacancies">
                     {vacancies.map(el =>

@@ -69,7 +69,58 @@ input[type="text"] {
     gap: 70px;
 }
 
+.menu {
+    position: absolute;
+    top: 63px;
+    height: 150px;
+    width: 228px;
+    left: -128px;
+    z-index: 5;
+    background-color: white;
+    padding: 15px;
+    border-right: 5px solid #B7F6FF;
+    border-bottom-right-radius: 10px;
+    border-bottom: 5px solid #B7F6FF;
+    border-bottom-left-radius: 10px;
+}
+
+.menuBlock {
+    position: relative;
+}
+
+.name {
+    height: 70px;
+    min-width: 100px;
+    display: flex;
+    justify-content: flex-end;
+    border-right: 5px solid #B7F6FF;
+    border-bottom: 5px solid #B7F6FF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 10px;
+    padding: 10px 5px;
+    position: relative;
+}
+
+.name::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #B9B9B9;
+    border-right: 2px solid #B9B9B9;
+    margin-right: 60px;
+    transform: rotate(135deg);
+    left: 50%;
+}
+
+.name .open::after {
+    transform: rotate(-45deg);
+}
+
 .head {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 0 20px 20px;
