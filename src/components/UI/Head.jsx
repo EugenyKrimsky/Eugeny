@@ -5,6 +5,8 @@ import HeadLogo from './../../assets/HeadLogo.svg'
 const Head = props => {
 
     const name = props.name;
+    const setPage = props.setPage;
+
     let [open, setOpen] = useState(false);
     let className = "name";
 
@@ -22,8 +24,8 @@ const Head = props => {
                     }
                     {open && 
                         <div className="menu">
-                            <div className="menu-item">Тестирование</div>
-                            <div className="menu-item">Результаты</div>
+                            <div className="menu-item" onClick={() => setPage('testing')}>Тестирование</div>
+                            <div className="menu-item" onClick={() => setPage('results')}>Результаты</div>
                             <div className="menu-item">Выйти</div>
                         </div>
                     }

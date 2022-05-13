@@ -7,11 +7,13 @@ const EmployersTesting = props => {
     const name = props.name;
     const vacancies = props.vacancies;
     const activeVacancy = vacancies.find(el => el.active);
+    const setVacancies = props.setVacancies;
+    const setPage = props.setPage;
+
     let candidates = [];
     if (activeVacancy) {
-        candidates = vacancies.find(el => el.active).candidates;
+        candidates = activeVacancy.candidates;
     }
-    const setVacancies = props.setVacancies;
 
     const setActiveVacancy = el => {
         const newVacancies = vacancies.map(el => el);
@@ -27,7 +29,7 @@ const EmployersTesting = props => {
 
     return (
         <div className='workSection mainCol'>
-            <Head name={name}/>
+            <Head name={name} setPage={setPage}/>
             <div className='EmployersTesting'>
                 <div className="vacancies">
                     {vacancies.map(el =>

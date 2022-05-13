@@ -8,15 +8,28 @@ const Input = props => {
     const name = props.name;
     const value = props.value;
     const setValue = props.setValue;
+    const placeholder = props.placeholder;
+    const className=props.className;
+    console.log(className);
+    const i = props?.i
+    const parI = props?.parI;
 
     const handle = () => {
         const text = newValue.current.value;
-        setValue && setValue(text);
+        if (i !== undefined) {
+            if (parI !== undefined) {
+                setValue && setValue(parI, i, text);
+            } else {
+                setValue && setValue(i, text);
+            }
+        } else {
+            setValue && setValue(text);
+        }
     }
 
     return (
-        <div className="text-field">
-            <input className="text-field__input" ref={newValue} type={name} name={name} id={name} value={value} onChange={handle} />
+        <div className={`text-field ${className}`}>
+            <input className="text-field__input" placeholder={placeholder} ref={newValue} type={name} name={name} id={name} value={value} onChange={handle} />
         </div>
     );
 };

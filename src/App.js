@@ -3,6 +3,7 @@ import './App.css';
 import ChooseMode from './components/Pages/ChoseMode'
 import Authorization from './components/Pages/Authorization'
 import EmployersTesting from './components/Pages/EmployersTesting'
+import EmployersResults from './components/Pages/EmployersResults'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -14,11 +15,11 @@ function App() {
         name: 'Кандидат 1',
         questions: 10,
         answered: 9
-      },{
+      }, {
         name: 'Кандидат 2',
         questions: 10,
         answered: 9
-      },{
+      }, {
         name: 'Кандидат 3',
         questions: 10,
         answered: 9
@@ -37,6 +38,7 @@ function App() {
       }]
     },
   ]);
+  const [page, setPage] = useState('testing');
 
   return (
     <div className="App">
@@ -49,7 +51,14 @@ function App() {
       {isLoggedIn &&
         <div>
           {mode === 'employer' &&
-            <EmployersTesting name={name} vacancies={vacancies} setVacancies={setVacancies}/>
+            <div>
+              {page === 'testing' &&
+                <EmployersTesting name={name} vacancies={vacancies} setVacancies={setVacancies} setPage={setPage} />
+              }
+              {page === 'results' &&
+                <EmployersResults name={name} vacancies={vacancies} setVacancies={setVacancies} setPage={setPage} />
+              }
+            </div>
           }
         </div>
       }
