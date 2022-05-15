@@ -9,8 +9,7 @@ const Input = props => {
     const value = props.value;
     const setValue = props.setValue;
     const placeholder = props.placeholder;
-    const className=props.className;
-    console.log(className);
+    const className= props.className || '';
     const i = props?.i
     const parI = props?.parI;
 
@@ -29,7 +28,7 @@ const Input = props => {
 
     return (
         <div className={`text-field ${className}`}>
-            <input className="text-field__input" placeholder={placeholder} ref={newValue} type={name} name={name} id={name} value={value} onChange={handle} />
+            <input className={`text-field__input ${className}`} placeholder={placeholder} ref={newValue} type={name} name={name} id={name} value={value} onChange={handle} />
         </div>
     );
 };

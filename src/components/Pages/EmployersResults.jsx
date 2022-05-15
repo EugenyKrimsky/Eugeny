@@ -53,7 +53,7 @@ const EmployersResults = props => {
     const addQue = () => {
         const maxIndex = questions.length;
         const newQue = {
-            question: `Вопрос ${maxIndex}`,
+            question: '',
             answers: ['']
         };
         setQuestions([...questions, newQue]);
@@ -64,7 +64,7 @@ const EmployersResults = props => {
 
         quesCopy.forEach((el, i) => {
             if (i === id) {
-                el.answers= [...el.answers, ''];
+                el.answers = [...el.answers, ''];
             }
         });
 
@@ -80,17 +80,19 @@ const EmployersResults = props => {
                 {questions.map((el, i) =>
                     <div className="questionBlock">
                         <Input className="_noBorder" name={`ВОПРОС ${i + 1}`} placeholder={`ВОПРОС ${i + 1}`} value={el.question} i={i} setValue={renameQue} />
-                        <div className="borderBlock">
-                            <div className="circle left"></div>
-                            <div className="border"></div>
-                            <div className="circle right"></div>
+                        <div className="borderBlockGrey">
+                            <div className="circleGrey left"></div>
+                            <div className="borderGrey"></div>
+                            <div className="circleGrey right"></div>
                         </div>
-                        {el.answers.map((el, id) =>
-                            <Input name={`ОТВЕТ ${id + 1}`} placeholder={`ОТВЕТ ${id + 1}`} value={el.question} i={id} parI={i} setValue={renameAns} />
-                        )}
-                        <div className="addAns" onClick={() => addAns(i)}>+ДОБАВИТЬ ОТВЕТ+</div>
+                        <div className="_ph60">
+                            {el.answers.map((el, id) =>
+                                <Input name={`ОТВЕТ ${id + 1}`} placeholder={`ОТВЕТ ${id + 1}`} value={el.question} i={id} parI={i} setValue={renameAns} />
+                            )}
+                            <div className="buttonShadow" onClick={() => addAns(i)}>+ ДОБАВИТЬ ОТВЕТ +</div>
+                        </div>
                     </div>)}
-                <div className="addQue" onClick={addQue}>+ДОБАВИТЬ ВОПРОС+</div>
+                <div className="buttonShadow" onClick={addQue}>+ ДОБАВИТЬ ВОПРОС +</div>
             </div>
             <Footer />
         </div>
