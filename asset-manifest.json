@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.62f3227f.css",
-    "main.js": "/static/js/main.3887331d.js",
-    "static/media/Logo.svg": "/static/media/Logo.39dc288acf2b11129f98c801b216dac2.svg",
-    "static/media/HeadLogo.svg": "/static/media/HeadLogo.0654129eeac28abe3b94adb8806e7a96.svg",
-    "index.html": "/index.html",
-    "main.62f3227f.css.map": "/static/css/main.62f3227f.css.map",
-    "main.3887331d.js.map": "/static/js/main.3887331d.js.map"
+    "main.css": "/Eugeny/static/css/main.62f3227f.css",
+    "main.js": "/Eugeny/static/js/main.5ff24c15.js",
+    "static/media/Logo.svg": "/Eugeny/static/media/Logo.39dc288acf2b11129f98c801b216dac2.svg",
+    "static/media/HeadLogo.svg": "/Eugeny/static/media/HeadLogo.0654129eeac28abe3b94adb8806e7a96.svg",
+    "index.html": "/Eugeny/index.html",
+    "main.62f3227f.css.map": "/Eugeny/static/css/main.62f3227f.css.map",
+    "main.5ff24c15.js.map": "/Eugeny/static/js/main.5ff24c15.js.map"
   },
   "entrypoints": [
     "static/css/main.62f3227f.css",
-    "static/js/main.3887331d.js"
+    "static/js/main.5ff24c15.js"
   ]
 }
