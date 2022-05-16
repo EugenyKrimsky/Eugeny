@@ -17,6 +17,21 @@ input[type="text"] {
     /* 1 */
     margin: 0;
     /* 2 */
+    user-select: initial;
+    color: #B9B9B9;
+}
+
+::placeholder {
+    color: #B9B9B9;
+}
+
+._mb15 {
+    margin-bottom: 15px;
+}
+
+textarea {
+    height: 200px !important;
+    resize: none;
 }
 
 .EmployersResults {
@@ -29,6 +44,10 @@ input[type="text"] {
     margin-bottom: 1rem;
 }
 
+body {
+    user-select: none;
+}
+
 /* стили для label */
 .text-field__label {
     display: block;
@@ -39,13 +58,13 @@ input[type="text"] {
 .text-field__input {
     display: block;
     width: 100%;
+    color: #B9B9B9;
     height: calc(3.5rem);
     padding: 0.375rem 0.75rem;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 26px;
     font-weight: 400;
     line-height: 1.5;
-    color: #212529;
     background-color: #fff;
     background-clip: padding-box;
     border: 8px solid #B7F6FF;
@@ -56,7 +75,7 @@ input[type="text"] {
 
 ._noBorder {
     border: none;
-    height: 16px;
+    height: 28px;
     text-align: center;
 }
 
@@ -314,6 +333,7 @@ input[type="text"] {
     border-radius: 15px;
     box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
     margin-bottom: 20px;
+    position: relative;
 }
 
 .item:hover {
@@ -321,6 +341,41 @@ input[type="text"] {
     background-color: #B9B9B9;
     box-shadow: none;
     color: white;
+}
+
+
+.item._active {
+    background-color: #B9B9B9;
+    box-shadow: none;
+    color: white;
+}
+
+.info-item {
+    display: flex;
+    color: #B9B9B9;
+    justify-content: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    border: 8px solid #B7F6FF;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.info-item:hover {
+    cursor: default
+}
+
+.info {
+    position: absolute;
+    z-index: 4;
+    background-color: white;
+    top: -8px;
+    width: 500px;
+    border: 8px solid #B7F6FF;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .Button {

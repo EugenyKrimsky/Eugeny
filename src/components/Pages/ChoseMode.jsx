@@ -11,7 +11,7 @@ const ChoseMode = props => {
             <img src={logo}/>
             <div className='flex-row'>
                 <Button text="Работадатель" callback={() => chooseMode('employer')} />
-                <Button text="Соискатель" callback={() => chooseMode('applicant')} />
+                <Button text="Соискатель" callback={() => chooseMode('worker')} />
             </div>
         </div>
     );

@@ -15,7 +15,7 @@ const EmployersResults = props => {
     const [answers, setAnswers] = useState([''])
     const [question, setQuestion] = useState('')
     const [questions, setQuestions] = useState([{
-        question: 'ВОПРОС 1',
+        question: '',
         answers: [''],
     }]);
 
