@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Eugeny/static/css/main.62f3227f.css",
+    "main.css": "/Eugeny/static/css/main.4d6c8bc5.css",
     "main.js": "/Eugeny/static/js/main.5ff24c15.js",
     "static/media/Logo.svg": "/Eugeny/static/media/Logo.39dc288acf2b11129f98c801b216dac2.svg",
     "static/media/HeadLogo.svg": "/Eugeny/static/media/HeadLogo.0654129eeac28abe3b94adb8806e7a96.svg",
     "index.html": "/Eugeny/index.html",
-    "main.62f3227f.css.map": "/Eugeny/static/css/main.62f3227f.css.map",
+    "main.4d6c8bc5.css.map": "/Eugeny/static/css/main.4d6c8bc5.css.map",
     "main.5ff24c15.js.map": "/Eugeny/static/js/main.5ff24c15.js.map"
   },
   "entrypoints": [
-    "static/css/main.62f3227f.css",
+    "static/css/main.4d6c8bc5.css",
     "static/js/main.5ff24c15.js"
   ]
 }
