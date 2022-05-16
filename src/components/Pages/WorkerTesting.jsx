@@ -11,6 +11,7 @@ const WorkerTesting = props => {
     const vacancies = props.vacancies;
     const activeVacancy = vacancies.find(el => el.active);
     const setVacancies = props.setVacancies;
+    const setIsLoggedIn = props.setIsLoggedIn;
     const setPage = props.setPage;
     let activeQue;
     if (activeVacancy) {
@@ -50,7 +51,7 @@ const WorkerTesting = props => {
 
     return (
         <div className='workSection mainCol'>
-            <Head name={name} setPage={setPage} />
+            <Head setIsLoggedIn={setIsLoggedIn} name={name} setPage={setPage} />
             <div className='EmployersTesting'>
                 <div className="vacancies">
                     {vacancies.map(el =>
@@ -84,7 +85,7 @@ const WorkerTesting = props => {
                     }
                 </div>
             </div>
-            <Footer />
+            <Footer setPage={setPage} />
         </div>);
 };
 

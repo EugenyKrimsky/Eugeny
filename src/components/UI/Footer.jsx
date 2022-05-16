@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Footer = props => {
+
+    const setPage = props.setPage;
+
     return (
         <div className='footer-wrap'>
             <div className="borderBlock">
@@ -12,7 +15,7 @@ const Footer = props => {
             <div className='footer'>
 
                 <div></div>
-                <div>МЫ</div>
+                <div onClick={() => setPage('we')}>МЫ</div>
             </div>
         </div>
     );

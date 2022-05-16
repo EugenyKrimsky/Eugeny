@@ -10,6 +10,7 @@ const EmployersTesting = props => {
     const activeVacancy = vacancies.find(el => el.active);
     const setVacancies = props.setVacancies;
     const setPage = props.setPage;
+    const setIsLoggedIn = props.setIsLoggedIn;
 
     let candidates = [];
     if (activeVacancy) {
@@ -51,7 +52,7 @@ const EmployersTesting = props => {
     }
 
     const calcQaulity = (answered, questions) => {
-        if (questions / answered > 0.5) {
+        if (answered / questions > 0.5) {
             return 'ПОДХОДИТ';
         } else {
             return 'НЕ ПОДХОДИТ';
@@ -73,7 +74,7 @@ const EmployersTesting = props => {
 
     return (
         <div className='workSection mainCol' onClick={closeMenu}>
-            <Head name={name} setPage={setPage} />
+            <Head setIsLoggedIn={setIsLoggedIn} name={name} setPage={setPage} />
             <div className='EmployersTesting'>
                 <div className="vacancies">
                     {vacancies.map(el =>
@@ -98,7 +99,7 @@ const EmployersTesting = props => {
                                             <div className="borderGrey"></div>
                                             <div className="circleGrey right"></div>
                                         </div>
-                                        <Input className="_noBorder" value={`9/10`} />
+                                        <Input className="_noBorder" value={`${el.answered}/${activeVacancy.questions.length}`} />
                                     </div>
                                 </div>
                             }
@@ -106,7 +107,7 @@ const EmployersTesting = props => {
                     )}
                 </div>
             </div>
-            <Footer />
+            <Footer setPage={setPage}/>
         </div>
     );
 };

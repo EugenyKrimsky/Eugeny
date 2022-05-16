@@ -6,6 +6,7 @@ const Head = props => {
 
     const name = props.name;
     const setPage = props.setPage;
+    const setIsLoggedIn = props.setIsLoggedIn;
 
     let [open, setOpen] = useState(false);
     let className = "name";
@@ -26,7 +27,7 @@ const Head = props => {
                         <div className="menu">
                             <div className="menu-item" onClick={() => setPage('testing')}>Тестирование</div>
                             <div className="menu-item" onClick={() => setPage('results')}>Результаты</div>
-                            <div className="menu-item">Выйти</div>
+                            <div className="menu-item _mt20" onClick={() => setIsLoggedIn(false)}>Выйти</div>
                         </div>
                     }
                 </div>

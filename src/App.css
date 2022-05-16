@@ -73,6 +73,28 @@ body {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+.we {
+    border-radius: 15px;
+    border: 8px solid #B7F6FF;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px 0;
+    padding: 70px 50px;
+}
+
+._mb20 {
+    margin-bottom: 20px;
+}
+
+._mt20 {
+    margin-top: 20px;
+}
+
+.we-block {
+    display: flex;
+}
+
 ._noBorder {
     border: none;
     height: 28px;
@@ -133,9 +155,10 @@ body {
 .menu {
     position: absolute;
     top: 63px;
-    height: 150px;
-    width: 228px;
-    left: -128px;
+    height: 171px;
+    width: -webkit-fill-available;
+    min-width: 228px;
+    right: 0;
     z-index: 5;
     background-color: white;
     padding: 15px;
@@ -176,7 +199,7 @@ body {
     left: 50%;
 }
 
-.name .open::after {
+.name.open::after {
     transform: rotate(-45deg);
 }
 

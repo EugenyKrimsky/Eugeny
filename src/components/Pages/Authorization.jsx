@@ -8,6 +8,7 @@ import Footer from './../UI/Footer'
 const Authorization = props => {
 
     const [formMode, setFormMode] = useState('auth');
+    const setPage = props.setPage;
     const mode = props.mode;
 
     const setName = props.setName;
@@ -61,7 +62,7 @@ const Authorization = props => {
                     }
                 </div>
             </div>
-            <Footer />
+            <Footer setPage={setPage}/>
         </div>
     );
 };

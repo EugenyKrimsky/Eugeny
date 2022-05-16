@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Textarea from './../UI/Textarea'
 import Head from './../UI/Head'
 import Footer from './../UI/Footer'
 import Input from './../UI/Input'
@@ -9,6 +10,7 @@ const EmployersResults = props => {
     const vacancies = props.vacancies;
     const setVacancies = props.setVacancies;
     const setPage = props.setPage;
+    const setIsLoggedIn = props.setIsLoggedIn;
 
     const [vacancyName, setVacancyName] = useState('');
     const [desc, setDesc] = useState('');
@@ -73,10 +75,10 @@ const EmployersResults = props => {
 
     return (
         <div className='workSection mainCol'>
-            <Head name={name} setPage={setPage} />
+            <Head setIsLoggedIn={setIsLoggedIn} name={name} setPage={setPage} />
             <div className="EmployersResults">
                 <Input name='НАЗВАНИЕ ВАКАНСИИ' placeholder="НАЗВАНИЕ ВАКАНСИИ" value={vacancyName} setValue={setVacancyName} />
-                <Input name='ОПИСАНИЕ ВАКАНСИИ' placeholder="ОПИСАНИЕ ВАКАНСИИ" value={desc} setValue={setDesc} />
+                <Textarea name='ОПИСАНИЕ ВАКАНСИИ' placeholder="ОПИСАНИЕ ВАКАНСИИ" value={desc} setValue={setDesc} />
                 {questions.map((el, i) =>
                     <div className="questionBlock">
                         <Input className="_noBorder" name={`ВОПРОС ${i + 1}`} placeholder={`ВОПРОС ${i + 1}`} value={el.question} i={i} setValue={renameQue} />
@@ -94,7 +96,7 @@ const EmployersResults = props => {
                     </div>)}
                 <div className="buttonShadow" onClick={addQue}>+ ДОБАВИТЬ ВОПРОС +</div>
             </div>
-            <Footer />
+            <Footer setPage={setPage}/>
         </div>
     );
 };
